@@ -21,7 +21,7 @@ YUI().use('panel', function (Y) {
             loaded = setTimeout(function () {
                 ov.hide();
                 R.setHTML('AJAX OK!\nThe result is:\n{code: 200, text: "success"}');
-                delete loaded;
+                loaded = undefined;
             }, 3000 + Math.random() * 10000);
         }
     });
