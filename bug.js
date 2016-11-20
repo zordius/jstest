@@ -13,8 +13,12 @@ YUI().use('panel', function (Y) {
     ov.render();
 
     Y.one('#start').on('click', function () {
+        console.log('Start clicked');
         R.setHTML('call AJAX, please wait....');
+        console.log('Will show loading panel');
         ov.show();
+        console.log('Will call ajax');
         getAjaxResult();
+        console.log('Click handler done');
     });
 });
